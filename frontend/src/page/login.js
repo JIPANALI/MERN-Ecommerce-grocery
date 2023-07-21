@@ -56,7 +56,7 @@ const Login = () => {
           //also check password and confirm password are same or not if not then it will going to be submit 
 
     if(email && password){
-      const fetchData=await fetch(`http://localhost:8080/login`, {
+      const fetchData=await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/login`, {
         method:"POST",
         headers:{
           "content-type":"application/json"
