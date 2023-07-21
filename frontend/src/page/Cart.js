@@ -29,7 +29,7 @@ const Cart = () => {
         if(user.email){ //this for the if user login then payment will be done otherwise not
 
             const stripePromise=await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
-            const res=await fetch("http://localhost:8080/checkout-payment",{
+            const res=await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/checkout-payment`,{
                 method:"POST",
                 headers:{
                     "content-type":"application/json"
