@@ -46,7 +46,7 @@ const handleOnChange=(e)=>{
     if (name && image && category)
     {
 
-      const fetchData=await fetch(`http://localhost:8080/uploadProduct`,{
+      const fetchData=await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/uploadProduct`,{
         method:"POST",
         headers:{
           "content-type":"application/json"
