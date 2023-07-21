@@ -68,7 +68,7 @@ console.log(process.env.REACT_APP_SERVER_DOMAIN);
 
     if(firstName && email && password && confirmPassword){
       if(password===confirmPassword){
-        const fetchData=await fetch(`http://localhost:8080/signup`, {
+        const fetchData=await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/signup`, {
           method:"POST",
           headers:{
             "content-type":"application/json"
